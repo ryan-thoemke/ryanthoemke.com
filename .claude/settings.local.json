@@ -7,7 +7,22 @@
       "Bash(ls /mnt/)",
       "Bash(find /Users/ryanthoemke -name \"CLAUDE.md\" 2>/dev/null | head -10)",
       "Bash(mkdir -p /Users/ryanthoemke/.claude/projects/-Users-ryanthoemke-ryanthoemke-com/memory)",
-      "Bash(npx create-next-app@latest ryanthoemke.com --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack)"
+      "Bash(npx create-next-app@latest ryanthoemke.com --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack)",
+      "Bash(npx shadcn@latest init --defaults)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(cat /tmp/nextjs-dev.log)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git push *)",
+      "mcp__mcp-registry__list_connectors",
+      "Bash(git add *)"
     ]
   }
 }
