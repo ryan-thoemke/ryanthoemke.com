@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/ryanthoemke/.claude -name \"*.md\" -o -name \"*.json\" | head -30 && ls /Users/ryanthoemke/.claude/)",
+      "Bash(ls /mnt/skills/public/frontend-design/)",
+      "Read(//mnt/**)",
+      "Bash(ls /mnt/)",
+      "Bash(find /Users/ryanthoemke -name \"CLAUDE.md\" 2>/dev/null | head -10)",
+      "Bash(mkdir -p /Users/ryanthoemke/.claude/projects/-Users-ryanthoemke-ryanthoemke-com/memory)",
+      "Bash(npx create-next-app@latest ryanthoemke.com --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack)"
+    ]
+  }
+}
