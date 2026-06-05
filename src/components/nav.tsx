@@ -2,7 +2,11 @@
 
 import { motion } from "framer-motion";
 
-const links = ["Work", "Music", "About"];
+const links = [
+  { label: "Work",  href: "/work"   },
+  { label: "Music", href: "#music"  },
+  { label: "About", href: "#about"  },
+];
 
 export function Nav() {
   return (
@@ -24,8 +28,8 @@ export function Nav() {
       <nav className="flex items-center gap-8">
         {links.map((link) => (
           <a
-            key={link}
-            href={`#${link.toLowerCase()}`}
+            key={link.label}
+            href={link.href}
             className="text-xs uppercase font-medium transition-colors duration-200"
             style={{
               color: "var(--muted-foreground)",
@@ -38,7 +42,7 @@ export function Nav() {
               (e.currentTarget as HTMLAnchorElement).style.color = "var(--muted-foreground)";
             }}
           >
-            {link}
+            {link.label}
           </a>
         ))}
       </nav>
