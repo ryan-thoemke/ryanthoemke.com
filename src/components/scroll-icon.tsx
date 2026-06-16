@@ -3,26 +3,26 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Guitar pick — rotated ~30° so it's clearly a pick held in playing position, stroke only
-function GuitarPick() {
+function GolfClub() {
+  // Iron side profile matching reference image:
+  // Grip top-right → steep diagonal shaft → hosel bends more vertical → large head bottom-left.
+  // Head: crown top, face on left (lofted), flat sole at bottom, back on right.
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Pick held at an angle, point toward lower-right — unmistakably a plectrum */}
+    <svg width="68" height="72" viewBox="0 0 68 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Grip — thick, top-right */}
+      <line x1="58" y1="3" x2="50" y2="16" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+      {/* Shaft — steep diagonal toward bottom-left, runs all the way to head */}
+      <line x1="50" y1="16" x2="29" y2="53" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      {/* Iron head — rounded corners, r=1.5 on 3 corners, r=3 on bottom-right heel */}
       <path
-        d="M8 8 C8 5 11 3 15 3 C27 3 41 12 41 22 C41 31 35 39 27 40 C22 41 18 39 16 36 C13 32 8 22 8 14 Z"
+        d="M29 55.5 Q29 54 27.5 53.9 L15.5 53.1 Q14 53 13.6 54.5 L12.4 59.5 Q12 61 13.5 61 L26 61 Q29 61 29 58 Z"
         stroke="currentColor"
         strokeWidth="2.2"
-        strokeLinejoin="round"
         fill="none"
       />
-      {/* Grip notch detail at the wide end */}
-      <path
-        d="M12 10 Q10 14 10 18"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        strokeLinecap="round"
-        opacity="0.5"
-      />
+      {/* Score lines */}
+      <line x1="13.5" y1="55.5" x2="28" y2="55.5" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" opacity="0.5" />
+      <line x1="13"   y1="58"   x2="28" y2="58"   stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" opacity="0.5" />
     </svg>
   );
 }
@@ -83,7 +83,7 @@ function AcousticGuitar() {
 }
 
 const icons = [
-  { id: "pick",   component: GuitarPick,     label: "Guitar pick"     },
+  { id: "club",   component: GolfClub,       label: "Golf club"       },
   { id: "rod",    component: FlyRod,         label: "Fly rod"         },
   { id: "guitar", component: AcousticGuitar, label: "Acoustic guitar" },
 ];

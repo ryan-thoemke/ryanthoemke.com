@@ -11,7 +11,7 @@ const projects = [
     title: "Sprout Design System",
     category: "Systems Design · Accessibility · Scale",
     summary:
-      "Built an organization-wide design system from nothing — 90+ components, 30+ patterns, adopted across 14 products and thousands of contributors. Delivered alongside a complete company rebrand.",
+      "Built an organization-wide design system from nothing: 90+ components, 30+ patterns, adopted across 14 products and thousands of contributors. Delivered alongside a complete company rebrand.",
     stats: [
       { value: "90+", label: "Components" },
       { value: "30+", label: "Patterns" },
@@ -25,7 +25,7 @@ const projects = [
     title: "A Decade Behind the Bar",
     category: "Operations · Leadership · Brand · Hospitality",
     summary:
-      "Ten years in the hospitality industry — from bartender to general manager. Rebuilt a restaurant's identity from the inside out: menu, space, team, and experience. Kept it alive through COVID.",
+      "Ten years in the hospitality industry, from bartender to general manager. Rebuilt a restaurant's identity from the inside out: menu, space, team, and experience. Kept it alive through COVID.",
     stats: [
       { value: "$25K",  label: "Monthly ordering" },
       { value: "20",    label: "Employees managed" },
@@ -70,7 +70,7 @@ export default function WorkPage() {
             className="mt-6 text-base font-light max-w-lg leading-relaxed"
             style={{ color: "var(--muted-foreground)" }}
           >
-            Two case studies that show how I think — one about building systems
+            Two case studies that show how I think. One about building systems
             that scale, one about building something people actually feel.
           </motion.p>
         </div>

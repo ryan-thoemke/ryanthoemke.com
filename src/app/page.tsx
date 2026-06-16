@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Nav } from "@/components/nav";
 import { ScrollIcon } from "@/components/scroll-icon";
 
@@ -22,8 +23,9 @@ const domains = [
     label: "Design",
     sub: "UX / Systems",
     description:
-      "Building design systems and digital products that serve real people — not just look good in Figma. Currently at Cargill, shaping the Sprout design system.",
+      "Building design systems and digital products that serve real people. Not just look good in Figma. Currently at Cargill, shaping the Sprout design system.",
     tag: "01",
+    href: "/work",
   },
   {
     label: "Music",
@@ -31,6 +33,7 @@ const domains = [
     description:
       "Writing songs that are autobiographical and emotionally direct. Performing acoustic sets. Chasing the line that sounds like it was always true.",
     tag: "02",
+    href: "/music",
   },
   {
     label: "Outdoors",
@@ -38,13 +41,15 @@ const domains = [
     description:
       "On the course or in a river, reading conditions, adjusting. The Brule River. Early mornings. The kind of patience that feels like focus.",
     tag: "03",
+    href: "/outdoors",
   },
   {
     label: "Building",
     sub: "Ideas / Projects",
     description:
-      "Cooking for people. Officiating weddings. Learning to code. Making things feel intentional — whatever the thing is.",
+      "Cooking for people. Officiating weddings. Learning to code. Making things feel intentional, whatever the thing is.",
     tag: "04",
+    href: null,
   },
 ];
 
@@ -107,7 +112,7 @@ export default function Home() {
             className="max-w-md text-base leading-relaxed font-light"
             style={{ color: "var(--muted-foreground)" }}
           >
-            I build things that feel intentional — design systems, songs,
+            I build things that feel intentional: design systems, songs,
             meals, speeches, and whatever else needs making. I work best when
             craft, usefulness, and identity are all in the same room.
           </motion.p>
@@ -169,74 +174,100 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2">
-            {domains.map((domain, i) => (
-              <motion.div
-                key={domain.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: i * 0.08,
-                  duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="group p-10 cursor-default relative overflow-hidden"
-                style={{
-                  background: "var(--card)",
-                  border: "1px solid var(--border)",
-                  marginTop: i >= 2 ? "-1px" : "0",
-                  marginLeft: i % 2 !== 0 ? "-1px" : "0",
-                  transition: "background 0.25s ease, box-shadow 0.25s ease",
-                }}
-                onMouseEnter={(e) => {
-                  const el = e.currentTarget as HTMLElement;
-                  el.style.background = "var(--background)";
-                  el.style.boxShadow = "0 4px 24px oklch(0.28 0.09 158 / 0.08)";
-                }}
-                onMouseLeave={(e) => {
-                  const el = e.currentTarget as HTMLElement;
-                  el.style.background = "var(--card)";
-                  el.style.boxShadow = "none";
-                }}
-              >
-                {/* Top accent bar — slides in on hover */}
-                <div
-                  className="absolute top-0 left-0 right-0 h-0.5 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
-                  style={{ background: "var(--green-mid)" }}
-                />
+            {domains.map((domain, i) => {
+              const cardContent = (
+                <motion.div
+                  key={domain.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    delay: i * 0.08,
+                    duration: 0.6,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  className="group p-10 relative overflow-hidden"
+                  style={{
+                    background: "var(--card)",
+                    border: "1px solid var(--border)",
+                    marginTop: i >= 2 ? "-1px" : "0",
+                    marginLeft: i % 2 !== 0 ? "-1px" : "0",
+                    cursor: domain.href ? "pointer" : "default",
+                    transition: "background 0.25s ease, box-shadow 0.25s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    const el = e.currentTarget as HTMLElement;
+                    el.style.background = "var(--background)";
+                    el.style.boxShadow = "0 4px 24px oklch(0.28 0.09 158 / 0.08)";
+                  }}
+                  onMouseLeave={(e) => {
+                    const el = e.currentTarget as HTMLElement;
+                    el.style.background = "var(--card)";
+                    el.style.boxShadow = "none";
+                  }}
+                >
+                  {/* Top accent bar */}
+                  <div
+                    className="absolute top-0 left-0 right-0 h-0.5 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+                    style={{ background: "var(--green-mid)" }}
+                  />
 
-                {/* Number tag */}
-                <span
-                  className="absolute top-8 right-8 text-xs font-medium tracking-widest"
-                  style={{ color: "var(--tan)", opacity: 0.9 }}
-                >
-                  {domain.tag}
-                </span>
+                  {/* Number tag */}
+                  <span
+                    className="absolute top-8 right-8 text-xs font-medium tracking-widest"
+                    style={{ color: "var(--tan)", opacity: 0.9 }}
+                  >
+                    {domain.tag}
+                  </span>
 
-                <h3
-                  className="font-display text-2xl mb-2"
-                  style={{ color: "var(--green-deep)" }}
-                >
-                  {domain.label}
-                </h3>
-                <p
-                  className="text-xs uppercase tracking-widest mb-5 font-medium"
-                  style={{ color: "var(--tan)", letterSpacing: "0.14em" }}
-                >
-                  {domain.sub}
-                </p>
-                <p
-                  className="text-sm leading-relaxed font-light"
-                  style={{ color: "var(--muted-foreground)" }}
-                >
-                  {domain.description}
-                </p>
-                <div
-                  className="mt-6 h-px w-0 group-hover:w-8 transition-all duration-500"
-                  style={{ background: "var(--green-mid)" }}
-                />
-              </motion.div>
-            ))}
+                  <h3
+                    className="font-display text-2xl mb-2"
+                    style={{ color: "var(--green-deep)" }}
+                  >
+                    {domain.label}
+                  </h3>
+                  <p
+                    className="text-xs uppercase tracking-widest mb-5 font-medium"
+                    style={{ color: "var(--tan)", letterSpacing: "0.14em" }}
+                  >
+                    {domain.sub}
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed font-light"
+                    style={{ color: "var(--muted-foreground)" }}
+                  >
+                    {domain.description}
+                  </p>
+                  {domain.href ? (
+                    <div className="mt-6 flex items-center gap-3">
+                      <div
+                        className="h-px w-6 group-hover:w-10 transition-all duration-500"
+                        style={{ background: "var(--green-mid)" }}
+                      />
+                      <span
+                        className="text-xs uppercase tracking-[0.16em] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        style={{ color: "var(--green-mid)" }}
+                      >
+                        Explore
+                      </span>
+                    </div>
+                  ) : (
+                    <div
+                      className="mt-6 h-px w-0 group-hover:w-8 transition-all duration-500"
+                      style={{ background: "var(--green-mid)" }}
+                    />
+                  )}
+                </motion.div>
+              );
+
+              return domain.href ? (
+                <Link key={domain.label} href={domain.href} className="block">
+                  {cardContent}
+                </Link>
+              ) : (
+                <div key={domain.label}>{cardContent}</div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -282,7 +313,7 @@ export default function Home() {
             >
               Whether that thing is a design system, a wedding speech, a live
               acoustic mix, a song lyric, a golf swing, or a dinner for
-              someone I care about — I try to bring the same level of
+              someone I care about. I try to bring the same level of
               attention to all of it.
             </p>
           </motion.div>
@@ -327,7 +358,7 @@ export default function Home() {
                 className="font-display text-xl md:text-2xl leading-relaxed italic max-w-2xl"
                 style={{ color: "var(--green-deep)" }}
               >
-                &ldquo;It&apos;s 3 am in Franklin, as the lights buzz overhead —
+                &ldquo;It&apos;s 3 am in Franklin, as the lights buzz overhead,
                 the sounds of clamoring still singing in my head.&rdquo;
               </blockquote>
               <motion.p
@@ -338,7 +369,7 @@ export default function Home() {
                 className="mt-5 text-xs uppercase tracking-[0.18em] font-medium"
                 style={{ color: "var(--tan)" }}
               >
-                — Getting There
+                Getting There
               </motion.p>
             </motion.div>
           </div>

@@ -107,7 +107,7 @@ const pillars = [
   },
   {
     title: "Components",
-    body: "90+ production components, each built to be composable, accessible, and predictable. Not just visual pieces — living documentation, coded behavior, and clear usage guidelines.",
+    body: "90+ production components, each built to be composable, accessible, and predictable. Not just visual pieces. Living documentation, coded behavior, and clear usage guidelines.",
   },
   {
     title: "Patterns",
@@ -155,8 +155,8 @@ export default function DesignSystemPage() {
             className="text-lg font-light leading-relaxed max-w-2xl"
             style={{ color: "var(--muted-foreground)" }}
           >
-            Building an organization-wide design language from nothing — alongside
-            a complete company rebrand — and creating a community that actually
+            Building an organization-wide design language from nothing, alongside
+            a complete company rebrand, and creating a community that actually
             uses it.
           </motion.p>
         </div>
@@ -208,10 +208,10 @@ export default function DesignSystemPage() {
               Three years ago, there was no system. Just UI kits. Nothing hardcoded. No shared language across teams.
             </p>
             <p className="text-sm leading-relaxed font-light mb-6" style={{ color: "var(--muted-foreground)" }}>
-              At the same time, the company was going through a complete rebrand. That meant building the design system wasn't just a technical challenge — it was a brand definition exercise. Every decision about color, type, and spacing had to hold up across thousands of people and dozens of products simultaneously.
+              At the same time, the company was going through a complete rebrand. That meant building the design system wasn't just a technical challenge. It was a brand definition exercise. Every decision about color, type, and spacing had to hold up across thousands of people and dozens of products simultaneously.
             </p>
             <p className="text-sm leading-relaxed font-light" style={{ color: "var(--muted-foreground)" }}>
-              The hardest part isn't the components. It's keeping the wires from getting tangled as the system grows. Scale changes everything — what works at 10 components breaks at 90.
+              The hardest part isn't the components. It's keeping the wires from getting tangled as the system grows. Scale changes everything. What works at 10 components breaks at 90.
             </p>
           </motion.div>
         </div>
@@ -229,7 +229,7 @@ export default function DesignSystemPage() {
           </motion.p>
           <SystemVisualization />
           <p className="mt-6 text-xs font-light" style={{ color: "var(--muted-foreground)", opacity: 0.6 }}>
-            Abstract representation of component architecture — actual designs are proprietary.
+            Abstract representation of component architecture. Actual designs are proprietary.
           </p>
         </div>
       </section>
@@ -311,10 +311,10 @@ export default function DesignSystemPage() {
               14 products. Thousands of contributors. One shared language.
             </p>
             <p className="text-sm leading-relaxed font-light mb-6" style={{ color: "var(--muted-foreground)" }}>
-              The measure of a design system isn't how many components it has — it's whether teams actually use it. Sprout succeeded because we built a community around it, not just a library. Office hours, contribution guidelines, Slack channels, and genuine investment in the people consuming it.
+              The measure of a design system isn't how many components it has. It's whether teams actually use it. Sprout succeeded because we built a community around it, not just a library. Office hours, contribution guidelines, Slack channels, and genuine investment in the people consuming it.
             </p>
             <p className="text-sm leading-relaxed font-light" style={{ color: "var(--muted-foreground)" }}>
-              The rebrand shipped consistently across every product because the system enforced it. That's what systems are for — making the right thing the easy thing.
+              The rebrand shipped consistently across every product because the system enforced it. That's what systems are for: making the right thing the easy thing.
             </p>
           </motion.div>
         </div>

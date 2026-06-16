@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const links = [
-  { label: "Work",  href: "/work"   },
-  { label: "Music", href: "#music"  },
-  { label: "About", href: "#about"  },
+  { label: "Work",   href: "/work"   },
+  { label: "Music",  href: "/music"  },
+  { label: "About",  href: "/about"  },
+  { label: "Resume", href: "/resume" },
 ];
 
 export function Nav() {
@@ -19,12 +21,13 @@ export function Nav() {
         background: "linear-gradient(to bottom, var(--background) 65%, transparent)",
       }}
     >
-      <span
-        className="font-display text-sm tracking-widest uppercase"
+      <Link
+        href="/"
+        className="font-display text-sm tracking-widest uppercase transition-opacity duration-200 hover:opacity-70"
         style={{ color: "var(--green-deep)", letterSpacing: "0.18em" }}
       >
         Ryan Thoemke
-      </span>
+      </Link>
       <nav className="flex items-center gap-8">
         {links.map((link) => (
           <a

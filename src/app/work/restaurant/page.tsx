@@ -17,7 +17,7 @@ const timeline = [
     year: "21",
     location: "Minnesota",
     role: "Bartender",
-    description: "Started behind the bar at a dive. Learned the rhythm of a room — when to move fast, when to slow down, how people actually behave when they're having a good time.",
+    description: "Started behind the bar at a dive. Learned the rhythm of a room: when to move fast, when to slow down, how people actually behave when they're having a good time.",
   },
   {
     year: "+1",
@@ -29,7 +29,7 @@ const timeline = [
     year: "+2",
     location: "Minneapolis, Minnesota",
     role: "General Manager",
-    description: "Came back and took over an Irish pub. Ran it for three years. Learned what it means to own a place without owning it — P&L, staff culture, vendor relationships, the whole operation.",
+    description: "Came back and took over an Irish pub. Ran it for three years. Learned what it means to own a place without owning it: P&L, staff culture, vendor relationships, the whole operation.",
   },
   {
     year: "+4",
@@ -46,7 +46,7 @@ const changes = [
   },
   {
     area: "Physical Space",
-    description: "Restructured the interior — seating arrangements, flow, atmosphere. The way a space is laid out changes how people experience it. Moved things until it felt right.",
+    description: "Restructured the interior: seating arrangements, flow, atmosphere. The way a space is laid out changes how people experience it. Moved things until it felt right.",
   },
   {
     area: "Menu",
@@ -58,11 +58,11 @@ const changes = [
   },
   {
     area: "Ordering & Finance",
-    description: "Owned all purchasing — food, liquor, beer, paper goods. Managed roughly $25K in monthly ordering. Learned to read inventory like a language and make decisions that kept margins healthy.",
+    description: "Owned all purchasing: food, liquor, beer, paper goods. Managed roughly $25K in monthly ordering. Learned to read inventory like a language and make decisions that kept margins healthy.",
   },
   {
     area: "Post-COVID Recovery",
-    description: "When everything shut down, we shut down. When it came back, we came back — and came back stronger. That didn't happen by accident. It happened because the foundation was solid.",
+    description: "When everything shut down, we shut down. When it came back, we came back, and came back stronger. That didn't happen by accident. It happened because the foundation was solid.",
   },
 ];
 
@@ -105,7 +105,7 @@ export default function RestaurantPage() {
             className="text-lg font-light leading-relaxed max-w-2xl"
             style={{ color: "var(--muted-foreground)" }}
           >
-            Ten years in the hospitality industry — from first shift to general manager.
+            Ten years in the hospitality industry, from first shift to general manager.
             What it taught me about people, operations, and making something feel like somewhere.
           </motion.p>
         </div>
@@ -252,7 +252,7 @@ export default function RestaurantPage() {
               After COVID, it came back. That doesn't happen by accident.
             </p>
             <p className="text-sm leading-relaxed font-light mb-6" style={{ color: "var(--muted-foreground)" }}>
-              COVID closed a lot of restaurants permanently. The ones that came back had something worth coming back to — a community, a reputation, a place people missed. We had that.
+              COVID closed a lot of restaurants permanently. The ones that came back had something worth coming back to: a community, a reputation, a place people missed. We had that.
             </p>
             <p className="text-sm leading-relaxed font-light" style={{ color: "var(--muted-foreground)" }}>
               What hospitality taught me about design: people don't remember the menu. They remember how the place made them feel. That's true of a restaurant and it's true of a product. You're always designing an experience, even when you think you're just designing an interface.
