@@ -199,7 +199,7 @@ export default function AboutPage() {
                 transition={{
                   delay: i * 0.07,
                   duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1],
+                  ease: [0.16, 1, 0.3, 1] as const,
                 }}
                 className="group py-10 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 items-start"
                 style={{ borderBottom: "1px solid var(--border)" }}
@@ -252,7 +252,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
           >
             <blockquote
               className="font-display text-2xl md:text-4xl leading-snug italic max-w-3xl"

@@ -57,7 +57,7 @@ export default function WorkPage() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
             className="font-display text-5xl md:text-7xl"
             style={{ color: "var(--green-deep)" }}
           >
@@ -66,7 +66,7 @@ export default function WorkPage() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
             className="mt-6 text-base font-light max-w-lg leading-relaxed"
             style={{ color: "var(--muted-foreground)" }}
           >
@@ -87,7 +87,7 @@ export default function WorkPage() {
               key={project.slug}
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 + i * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: 0.2 + i * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
             >
               <Link href={`/work/${project.slug}`} className="block group">
                 <div

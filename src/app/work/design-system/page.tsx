@@ -8,7 +8,7 @@ const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   show: (i: number = 0) => ({
     opacity: 1, y: 0,
-    transition: { delay: i * 0.08, duration: 0.65, ease: [0.16, 1, 0.3, 1] },
+    transition: { delay: i * 0.08, duration: 0.65, ease: [0.16, 1, 0.3, 1] as const },
   }),
 };
 
@@ -37,7 +37,7 @@ function SystemVisualization() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: i * 0.04, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ delay: i * 0.04, duration: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
           style={{
             width: b.w,
             height: b.h,
@@ -71,7 +71,7 @@ function TokenDiagram() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: ti * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ delay: ti * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
           className="p-6 rounded-sm"
           style={{ background: "var(--card)", border: "1px solid var(--border)" }}
         >
@@ -175,7 +175,7 @@ export default function DesignSystemPage() {
               key={stat.label}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 + i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: 0.4 + i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
             >
               <p className="font-display text-4xl md:text-5xl mb-2" style={{ color: "var(--green-deep)" }}>
                 {stat.value}
@@ -201,7 +201,7 @@ export default function DesignSystemPage() {
           <motion.div
             initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
             className="md:col-span-2"
           >
             <p className="font-display text-2xl md:text-3xl leading-snug mb-8" style={{ color: "var(--green-deep)" }}>
@@ -269,7 +269,7 @@ export default function DesignSystemPage() {
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
                 className="p-10 group cursor-default transition-colors duration-300"
                 style={{
                   background: "var(--card)",
@@ -304,7 +304,7 @@ export default function DesignSystemPage() {
           <motion.div
             initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
             className="md:col-span-2"
           >
             <p className="font-display text-2xl md:text-3xl leading-snug mb-8" style={{ color: "var(--green-deep)" }}>

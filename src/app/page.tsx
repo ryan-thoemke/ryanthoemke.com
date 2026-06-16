@@ -13,7 +13,7 @@ const fadeUp = {
     transition: {
       delay: i * 0.1,
       duration: 0.7,
-      ease: [0.16, 1, 0.3, 1],
+      ease: [0.16, 1, 0.3, 1] as const,
     },
   }),
 };
@@ -184,7 +184,7 @@ export default function Home() {
                   transition={{
                     delay: i * 0.08,
                     duration: 0.6,
-                    ease: [0.16, 1, 0.3, 1],
+                    ease: [0.16, 1, 0.3, 1] as const,
                   }}
                   className="group p-10 relative overflow-hidden"
                   style={{
@@ -296,7 +296,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
             className="md:col-span-2"
           >
             <p
@@ -352,7 +352,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
             >
               <blockquote
                 className="font-display text-xl md:text-2xl leading-relaxed italic max-w-2xl"
