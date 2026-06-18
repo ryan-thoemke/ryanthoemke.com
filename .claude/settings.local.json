@@ -22,7 +22,30 @@
       "Bash(git branch *)",
       "Bash(git push *)",
       "mcp__mcp-registry__list_connectors",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/work)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/work/design-system)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/work/restaurant)",
+      "Bash(git commit -m ' *)",
+      "Bash(git pull *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(sips -g all /Users/ryanthoemke/ryanthoemke.com/public/images/IMG_0228.png)",
+      "Bash(sips -g pixelHeight /Users/ryanthoemke/ryanthoemke.com/public/images/IMG_0228.png)",
+      "Bash(sips -c 823 1206 /Users/ryanthoemke/ryanthoemke.com/public/images/IMG_0228.png --out /tmp/IMG_0228_test.png)",
+      "Bash(sips -g pixelHeight /tmp/IMG_0228_test.png)",
+      "Bash(convert /Users/ryanthoemke/ryanthoemke.com/public/images/IMG_0228.png -crop 1206x823+0+169 +repage /tmp/IMG_0228_top_crop.png)",
+      "Bash(sips -g pixelHeight /tmp/IMG_0228_top_crop.png)",
+      "Bash(ffmpeg -i /Users/ryanthoemke/ryanthoemke.com/public/images/IMG_0228.png -vf \"crop=1206:823:0:169\" /tmp/IMG_0228_top_crop.png -y)",
+      "Bash(brew list *)",
+      "Bash(npx tsc *)",
+      "Read(//Users/ryanthoemke/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/2bccda2f-cf7b-4d33-a8a0-e60cf54b9778/a492fc66-3a9d-41b4-8ce6-5d427b02218f/skills/docx/**)",
+      "Bash(python scripts/office/unpack.py \"/Users/ryanthoemke/Desktop/Job Stuff/Ryan_Thoemke_Waggle_CoverLetter.docx\" /tmp/coverletter_unpacked/)",
+      "Bash(python3 scripts/office/unpack.py \"/Users/ryanthoemke/Desktop/Job Stuff/Ryan_Thoemke_Waggle_CoverLetter.docx\" /tmp/coverletter_unpacked/)",
+      "Bash(cp \"/Users/ryanthoemke/Desktop/Job Stuff/Ryan_Thoemke_Waggle_CoverLetter.docx\" cover.zip)",
+      "Bash(unzip -o cover.zip word/document.xml -d cover_extracted)",
+      "Bash(cp \"/Users/ryanthoemke/Desktop/Job Stuff/Ryan_Thoemke_Resume.pdf\" /Users/ryanthoemke/ryanthoemke.com/public/Ryan_Thoemke_Resume.pdf && mkdir -p /Users/ryanthoemke/ryanthoemke.com/src/app/resume)",
+      "Bash(kill 42195)",
+      "Bash(gh repo *)"
     ]
   }
 }
