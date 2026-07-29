@@ -8,14 +8,14 @@ const projects = [
   {
     slug: "design-system",
     index: "01",
-    title: "Sprout Design System",
-    category: "Systems Design · Accessibility · Scale",
+    title: "An Enterprise Design System",
+    category: "Systems Design · Token Architecture · Scale",
     summary:
-      "Built an organization-wide design system from nothing: 90+ components, 30+ patterns, adopted across 14 products and thousands of contributors. Delivered alongside a complete company rebrand.",
+      "Co-designed a shared visual language from nothing: 100+ components across two delivery layers, 75 documentation sections, adopted by 39 teams. Built with an AI-native knowledge layer most systems don't have.",
     stats: [
-      { value: "90+", label: "Components" },
-      { value: "30+", label: "Patterns" },
-      { value: "14",  label: "Products" },
+      { value: "100+", label: "Components" },
+      { value: "75",   label: "Doc sections" },
+      { value: "39",   label: "Teams" },
     ],
     tag: "Design Systems",
   },

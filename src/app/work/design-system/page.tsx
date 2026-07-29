@@ -12,7 +12,6 @@ const fadeUp = {
   }),
 };
 
-// Abstract component grid — represents a living design system without showing real IP
 function SystemVisualization() {
   const blocks = [
     { w: "100%", h: 48, r: 4 },
@@ -55,7 +54,6 @@ function SystemVisualization() {
   );
 }
 
-// Token hierarchy diagram
 function TokenDiagram() {
   const tiers = [
     { label: "Global Tokens", items: ["color.green.800", "spacing.4", "radius.md", "font.size.base"], color: "var(--green-deep)" },
@@ -102,20 +100,20 @@ function TokenDiagram() {
 
 const pillars = [
   {
-    title: "Foundations",
-    body: "Before a single component was built, we established the language. Color tokens, typography scales, spacing systems, motion principles. The stuff no one sees but everyone feels when it's missing.",
+    title: "Token Architecture",
+    body: "I defined the foundation: a layered token system where global values feed semantic tokens, which drive component tokens. One decision at the global layer cascades everywhere. Changing a brand color is one edit, not a search-and-replace across twelve apps.",
   },
   {
-    title: "Components",
-    body: "90+ production components, each built to be composable, accessible, and predictable. Not just visual pieces. Living documentation, coded behavior, and clear usage guidelines.",
+    title: "Two Adoption Paths",
+    body: "Greenfield teams get the full component library. Existing production apps get a theme migration path — no redesign, no forced component swaps, just token alignment. Removing the rewrite requirement is what made adoption real. Most design systems die because the on-ramp is too steep.",
   },
   {
-    title: "Patterns",
-    body: "30+ patterns that answer the harder question: not just what a button looks like, but how a whole form behaves. How a data table handles empty states. How an error communicates without alarming.",
+    title: "Documentation Built to Last",
+    body: "I wrote a significant portion of the foundations, component docs, and AI-readable markdown guides. Documentation isn't a nice-to-have — it's the difference between a system teams use and one they ignore. We built it so a new developer could be productive without ever asking a designer.",
   },
   {
-    title: "Community",
-    body: "The system didn't succeed because it was technically good. It succeeded because teams adopted it and contributed to it. We built channels, office hours, and rituals around it. That's the real work.",
+    title: "AI-Native from the Start",
+    body: "The system ships an MCP server and a structured knowledge layer that AI tools can query, validate against, and generate from. Design decisions are authority-weighted and freshness-tracked. Teams using AI to assist development can generate on-system code instead of hallucinating components.",
   },
 ];
 
@@ -141,23 +139,26 @@ export default function DesignSystemPage() {
             className="text-xs uppercase tracking-[0.22em] font-medium mb-6"
             style={{ color: "var(--tan)" }}
           >
-            Systems Design · Accessibility · Scale · Rebrand
+            Systems Design · Token Architecture · Scale · Accessibility
           </motion.p>
 
           <motion.h1 custom={2} variants={fadeUp} initial="hidden" animate="show"
             className="font-display text-5xl md:text-7xl mb-8"
             style={{ color: "var(--green-deep)" }}
           >
-            Sprout Design<br />System
+            An Enterprise<br />
+            <em className="font-display" style={{ fontStyle: "italic", color: "var(--tan-deep)" }}>
+              Design System
+            </em>
           </motion.h1>
 
           <motion.p custom={3} variants={fadeUp} initial="hidden" animate="show"
             className="text-lg font-light leading-relaxed max-w-2xl"
             style={{ color: "var(--muted-foreground)" }}
           >
-            Building an organization-wide design language from nothing, alongside
-            a complete company rebrand, and creating a community that actually
-            uses it.
+            Co-designing a shared visual language from nothing — replacing a fragmented
+            ecosystem of competing frameworks with one token-driven system that 39 teams
+            now use to build from.
           </motion.p>
         </div>
       </section>
@@ -166,10 +167,10 @@ export default function DesignSystemPage() {
       <div style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", background: "var(--card)" }}>
         <div className="max-w-6xl mx-auto px-8 md:px-16 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { value: "90+",    label: "Components published" },
-            { value: "30+",    label: "Patterns documented" },
-            { value: "14",     label: "Products consuming Sprout" },
-            { value: "3 yrs",  label: "In active development" },
+            { value: "100+",  label: "Components shipped" },
+            { value: "75",    label: "Documentation sections" },
+            { value: "39",    label: "Teams using or adopting" },
+            { value: "2",     label: "Adoption paths" },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -188,7 +189,7 @@ export default function DesignSystemPage() {
         </div>
       </div>
 
-      {/* The challenge */}
+      {/* The problem */}
       <section className="px-8 py-24 md:px-16 md:py-28">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
           <motion.p
@@ -196,7 +197,7 @@ export default function DesignSystemPage() {
             className="text-xs uppercase tracking-[0.22em] font-medium md:pt-2"
             style={{ color: "var(--tan)" }}
           >
-            The Challenge
+            The Problem
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
@@ -205,13 +206,42 @@ export default function DesignSystemPage() {
             className="md:col-span-2"
           >
             <p className="font-display text-2xl md:text-3xl leading-snug mb-8" style={{ color: "var(--green-deep)" }}>
-              Three years ago, there was no system. Just UI kits. Nothing hardcoded. No shared language across teams.
+              Every team was building the same things in different ways. The UI never stopped. The UX never started.
             </p>
             <p className="text-sm leading-relaxed font-light mb-6" style={{ color: "var(--muted-foreground)" }}>
-              At the same time, the company was going through a complete rebrand. That meant building the design system wasn't just a technical challenge. It was a brand definition exercise. Every decision about color, type, and spacing had to hold up across thousands of people and dozens of products simultaneously.
+              Before this system existed, there was a design kit disguised as a design system — a skinned copy of an open-source component library with no brand backing and no governance. Developers chose their own stack: React, MUI, Tailwind, Bootstrap. Every product team made its own UI decisions, rebuilt its own primitives, and shipped its own inconsistencies.
             </p>
             <p className="text-sm leading-relaxed font-light" style={{ color: "var(--muted-foreground)" }}>
-              The hardest part isn't the components. It's keeping the wires from getting tangled as the system grows. Scale changes everything. What works at 10 components breaks at 90.
+              The cost wasn't just visual fragmentation. So much engineering time was consumed by UI that user experience work had fallen behind. Teams weren't moving slowly because they lacked talent — they were moving slowly because there was no foundation to build on.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* My role */}
+      <section style={{ borderTop: "1px solid var(--border)", background: "var(--muted)" }} className="px-8 py-24 md:px-16 md:py-28">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+          <motion.p
+            initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+            className="text-xs uppercase tracking-[0.22em] font-medium md:pt-2"
+            style={{ color: "var(--tan)" }}
+          >
+            My Role
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
+            className="md:col-span-2"
+          >
+            <p className="font-display text-2xl md:text-3xl leading-snug mb-8" style={{ color: "var(--green-deep)" }}>
+              Co-designer. I owned the token architecture and built a significant portion of the documentation.
+            </p>
+            <p className="text-sm leading-relaxed font-light mb-6" style={{ color: "var(--muted-foreground)" }}>
+              I worked closely with one teammate to design and build the system. My focus was the foundation layer: defining the token architecture that everything else inherits from, and making sure that foundation was documented clearly enough that any designer or developer could work with it independently.
+            </p>
+            <p className="text-sm leading-relaxed font-light" style={{ color: "var(--muted-foreground)" }}>
+              I wrote the foundations docs, component documentation, and the AI-readable markdown guides that allow AI tools to consume and validate against the system. Getting the knowledge layer right was as important as getting the components right.
             </p>
           </motion.div>
         </div>
@@ -308,13 +338,16 @@ export default function DesignSystemPage() {
             className="md:col-span-2"
           >
             <p className="font-display text-2xl md:text-3xl leading-snug mb-8" style={{ color: "var(--green-deep)" }}>
-              14 products. Thousands of contributors. One shared language.
+              39 teams. One shared language. UI is no longer the bottleneck.
             </p>
             <p className="text-sm leading-relaxed font-light mb-6" style={{ color: "var(--muted-foreground)" }}>
-              The measure of a design system isn't how many components it has. It's whether teams actually use it. Sprout succeeded because we built a community around it, not just a library. Office hours, contribution guidelines, Slack channels, and genuine investment in the people consuming it.
+              The system is in active production use. Teams that previously rebuilt components from scratch are now shipping from a shared foundation — and doing it faster. Adoption grew because the on-ramp was intentionally low: existing apps could align to the token system without a full rewrite, and new apps could start with the full component library from day one.
+            </p>
+            <p className="text-sm leading-relaxed font-light mb-6" style={{ color: "var(--muted-foreground)" }}>
+              The AI integration has proven to be the most forward-leaning part of what we built. Teams using AI-assisted development can now query the system, validate components against it, and generate on-system code — instead of producing custom UI that immediately goes off-brand.
             </p>
             <p className="text-sm leading-relaxed font-light" style={{ color: "var(--muted-foreground)" }}>
-              The rebrand shipped consistently across every product because the system enforced it. That's what systems are for: making the right thing the easy thing.
+              The real measure of the system is what it freed up. When UI is handled, teams do UX. That was the point from the beginning.
             </p>
           </motion.div>
         </div>
