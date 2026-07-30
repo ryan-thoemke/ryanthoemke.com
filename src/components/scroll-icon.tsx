@@ -9,11 +9,11 @@ function GolfClub() {
   // Head: crown top, face on left (lofted), flat sole at bottom, back on right.
   return (
     <svg width="68" height="72" viewBox="0 0 68 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Grip — thick, top-right */}
+      {/* Grip - thick, top-right */}
       <line x1="58" y1="3" x2="50" y2="16" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
-      {/* Shaft — steep diagonal toward bottom-left, runs all the way to head */}
+      {/* Shaft - steep diagonal toward bottom-left, runs all the way to head */}
       <line x1="50" y1="16" x2="29" y2="53" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      {/* Iron head — rounded corners, r=1.5 on 3 corners, r=3 on bottom-right heel */}
+      {/* Iron head - rounded corners, r=1.5 on 3 corners, r=3 on bottom-right heel */}
       <path
         d="M29 55.5 Q29 54 27.5 53.9 L15.5 53.1 Q14 53 13.6 54.5 L12.4 59.5 Q12 61 13.5 61 L26 61 Q29 61 29 58 Z"
         stroke="currentColor"
@@ -30,7 +30,7 @@ function GolfClub() {
 function FlyRod() {
   return (
     <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Rod — thick handle tapering to fine tip */}
+      {/* Rod - thick handle tapering to fine tip */}
       <line x1="6" y1="46" x2="44" y2="10" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
       <line x1="20" y1="36" x2="44" y2="10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
       {/* Reel seat */}
@@ -74,7 +74,7 @@ function AcousticGuitar() {
       <circle cx="15" cy="37" r="3.8" stroke="currentColor" strokeWidth="1.5" fill="none" />
       {/* Bridge */}
       <rect x="11" y="51" width="8" height="2" rx="1" stroke="currentColor" strokeWidth="1.3" fill="none" />
-      {/* Strings — very subtle */}
+      {/* Strings - very subtle */}
       <line x1="13.5" y1="9" x2="13.5" y2="51" stroke="currentColor" strokeWidth="0.4" opacity="0.4" />
       <line x1="15" y1="9" x2="15" y2="51" stroke="currentColor" strokeWidth="0.4" opacity="0.4" />
       <line x1="16.5" y1="9" x2="16.5" y2="51" stroke="currentColor" strokeWidth="0.4" opacity="0.4" />

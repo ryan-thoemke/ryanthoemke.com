@@ -65,7 +65,7 @@ export default function Home() {
         id="home"
       >
         <div className="relative z-10 max-w-6xl">
-          {/* Eyebrow — rule + location */}
+          {/* Eyebrow - rule + location */}
           <motion.div
             custom={0}
             variants={fadeUp}
@@ -82,7 +82,7 @@ export default function Home() {
             </span>
           </motion.div>
 
-          {/* Headline — deep forest green */}
+          {/* Headline - deep forest green */}
           <motion.h1
             custom={1}
             variants={fadeUp}

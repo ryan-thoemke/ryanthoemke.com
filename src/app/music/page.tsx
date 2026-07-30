@@ -36,7 +36,7 @@ export default function MusicPage() {
     <div className="min-h-dvh" style={{ background: "var(--background)" }}>
       <Nav />
 
-      {/* Hero — dark, atmospheric */}
+      {/* Hero - dark, atmospheric */}
       <section
         className="relative min-h-[70vh] flex flex-col justify-end px-8 pb-20 pt-40 md:px-16 md:pb-28 overflow-hidden"
         style={{ background: "var(--green-deep)" }}

@@ -96,7 +96,7 @@ export default function WorkPage() {
                 >
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
 
-                    {/* Left — index + tag */}
+                    {/* Left - index + tag */}
                     <div className="md:col-span-1 flex md:flex-col items-center md:items-start gap-4 md:gap-3 md:pt-2">
                       <span className="font-display text-sm" style={{ color: "var(--tan)" }}>
                         {project.index}
@@ -113,7 +113,7 @@ export default function WorkPage() {
                       </span>
                     </div>
 
-                    {/* Center — title + summary */}
+                    {/* Center - title + summary */}
                     <div className="md:col-span-7">
                       <p className="text-xs uppercase tracking-[0.18em] font-medium mb-4" style={{ color: "var(--tan)" }}>
                         {project.category}
@@ -143,7 +143,7 @@ export default function WorkPage() {
                       </div>
                     </div>
 
-                    {/* Right — stats */}
+                    {/* Right - stats */}
                     <div className="md:col-span-4 grid grid-cols-3 md:grid-cols-1 gap-6 md:gap-8">
                       {project.stats.map((stat) => (
                         <div key={stat.label}>

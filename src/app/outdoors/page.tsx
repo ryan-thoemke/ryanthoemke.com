@@ -70,7 +70,7 @@ const stories: Story[] = [
     category: "Fly Fishing",
     title: "Steelhead fishing is mostly not catching fish",
     excerpt:
-      "Six hours. Zero fish. One follow. That was last Saturday. And yet I'd be back next weekend if the CFS looked right. That's the thing about steelhead — the blank days are part of the deal.",
+      "Six hours. Zero fish. One follow. That was last Saturday. And yet I'd be back next weekend if the CFS looked right. That's the thing about steelhead - the blank days are part of the deal.",
     date: "Dec 4, 2025",
     readTime: "4 min read",
   },

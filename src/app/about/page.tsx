@@ -111,7 +111,7 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
-      {/* Photo + intro — image with gradient mask, text overlaid at bottom */}
+      {/* Photo + intro - image with gradient mask, text overlaid at bottom */}
       <section className="px-8 py-16 md:px-16 md:py-20">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -138,7 +138,7 @@ export default function AboutPage() {
             {/* Spacer so text overlay has room below the image */}
             <div style={{ height: "195px", background: "var(--background)" }} />
 
-            {/* Gradient — starts around knee level (~52% down), bleeds to full linen */}
+            {/* Gradient - starts around knee level (~52% down), bleeds to full linen */}
             <div
               className="absolute inset-x-0"
               style={{
@@ -149,7 +149,7 @@ export default function AboutPage() {
               }}
             />
 
-            {/* Text overlaid — starts in the gradient zone around knee level */}
+            {/* Text overlaid - starts in the gradient zone around knee level */}
             <div className="absolute inset-x-0 bottom-0 px-8 pb-10 md:px-12 md:pb-12">
               <p
                 className="font-display text-2xl md:text-4xl leading-snug mb-5 max-w-2xl"
