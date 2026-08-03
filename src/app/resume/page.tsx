@@ -9,7 +9,7 @@ const experience = [
     title: "UX Designer, Design Systems",
     company: "Cargill",
     location: "Minneapolis, MN",
-    years: "2021 - Present",
+    years: "2021 to Present",
     bullets: [
       "Co-created and own the enterprise design system, now adopted by 13 product teams across the organization.",
       "Direct point of contact for external brand partners including Sysco and Cargill Beef: coordinating on requirements, presenting recommendations, and keeping relationships strong.",
@@ -21,7 +21,7 @@ const experience = [
     title: "General Manager",
     company: "Quinny's",
     location: "Mahtomedi, MN",
-    years: "2018 - 2020",
+    years: "2018 to 2020",
     bullets: [
       "Led a full restaurant turnaround: owned the P&L, rebuilt the menu, launched an online presence, curated a branded apparel line, and implemented a new POS system.",
       "Booked and ran ongoing brand partnership events: live music nights, craft brewery partnerships, and liquor brand activations.",
@@ -32,7 +32,7 @@ const experience = [
     title: "General Manager",
     company: "Brewhouse South",
     location: "Cool Springs, TN",
-    years: "2016 - 2018",
+    years: "2016 to 2018",
     bullets: [
       "Ran full daily operations of a high-volume Nashville-area restaurant: staff, vendors, inventory, and guest relationships in a fast-paced market.",
     ],
@@ -41,7 +41,7 @@ const experience = [
     title: "Sales Associate, Computers & Technology",
     company: "Best Buy",
     location: "White Bear Lake, MN",
-    years: "2010 - 2014",
+    years: "2010 to 2014",
     bullets: [
       "Promoted from cashier to computer sales after one year. Built real rapport with customers and matched them with the right products every time.",
       "Built a consultative approach from the sales floor up: listening first, then finding the right fit.",
@@ -65,7 +65,7 @@ const education = [
   {
     degree: "UX Design Certificate",
     school: "Prime Digital Academy",
-    years: "2020 - 2021",
+    years: "2020 to 2021",
   },
   {
     degree: "A.A.S., Audio Engineering & Production",

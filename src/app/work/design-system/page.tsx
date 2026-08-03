@@ -105,11 +105,11 @@ const pillars = [
   },
   {
     title: "Two Adoption Paths",
-    body: "Greenfield teams get the full component library. Existing production apps get a theme migration path - no redesign, no forced component swaps, just token alignment. Removing the rewrite requirement is what made adoption real. Most design systems die because the on-ramp is too steep.",
+    body: "Greenfield teams get the full component library. Existing production apps get a theme migration path: no redesign, no forced component swaps, just token alignment. Removing the rewrite requirement is what made adoption real. Most design systems die because the on-ramp is too steep.",
   },
   {
     title: "Documentation Built to Last",
-    body: "I wrote a significant portion of the foundations, component docs, and AI-readable markdown guides. Documentation isn't a nice-to-have - it's the difference between a system teams use and one they ignore. We built it so a new developer could be productive without ever asking a designer.",
+    body: "I wrote a significant portion of the foundations, component docs, and AI-readable markdown guides. Documentation is the difference between a system teams use and one they ignore. We built it so a new developer could be productive without ever asking a designer.",
   },
   {
     title: "AI-Native from the Start",
@@ -156,7 +156,7 @@ export default function DesignSystemPage() {
             className="text-lg font-light leading-relaxed max-w-2xl"
             style={{ color: "var(--muted-foreground)" }}
           >
-            Co-designing a shared visual language from nothing - replacing a fragmented
+            Co-designing a shared visual language from nothing. Replacing a fragmented
             ecosystem of competing frameworks with one token-driven system that 39 teams
             now use to build from.
           </motion.p>
@@ -209,10 +209,10 @@ export default function DesignSystemPage() {
               Every team was building the same things in different ways. The UI never stopped. The UX never started.
             </p>
             <p className="text-sm leading-relaxed font-light mb-6" style={{ color: "var(--muted-foreground)" }}>
-              Before this system existed, there was a design kit disguised as a design system - a skinned copy of an open-source component library with no brand backing and no governance. Developers chose their own stack: React, MUI, Tailwind, Bootstrap. Every product team made its own UI decisions, rebuilt its own primitives, and shipped its own inconsistencies.
+              Before this system existed, there was a design kit disguised as a design system. It was a skinned copy of an open source component library with no brand backing and no governance. Developers chose their own stack: React, MUI, Tailwind, Bootstrap. Every product team made its own UI decisions, rebuilt its own primitives, and shipped its own inconsistencies.
             </p>
             <p className="text-sm leading-relaxed font-light" style={{ color: "var(--muted-foreground)" }}>
-              The cost wasn't just visual fragmentation. So much engineering time was consumed by UI that user experience work had fallen behind. Teams weren't moving slowly because they lacked talent - they were moving slowly because there was no foundation to build on.
+              The cost wasn't just visual fragmentation. So much engineering time was consumed by UI that user experience work had fallen behind. Teams weren't moving slowly because they lacked talent. They were moving slowly because there was no foundation to build on.
             </p>
           </motion.div>
         </div>
@@ -341,10 +341,10 @@ export default function DesignSystemPage() {
               39 teams. One shared language. UI is no longer the bottleneck.
             </p>
             <p className="text-sm leading-relaxed font-light mb-6" style={{ color: "var(--muted-foreground)" }}>
-              The system is in active production use. Teams that previously rebuilt components from scratch are now shipping from a shared foundation - and doing it faster. Adoption grew because the on-ramp was intentionally low: existing apps could align to the token system without a full rewrite, and new apps could start with the full component library from day one.
+              The system is in active production use. Teams that previously rebuilt components from scratch are now shipping from a shared foundation, and doing it faster. Adoption grew because the on-ramp was intentionally low: existing apps could align to the token system without a full rewrite, and new apps could start with the full component library from day one.
             </p>
             <p className="text-sm leading-relaxed font-light mb-6" style={{ color: "var(--muted-foreground)" }}>
-              The AI integration has proven to be the most forward-leaning part of what we built. Teams using AI-assisted development can now query the system, validate components against it, and generate on-system code - instead of producing custom UI that immediately goes off-brand.
+              The AI integration has proven to be the most forward-leaning part of what we built. Teams using AI-assisted development can now query the system, validate components against it, and generate on-system code instead of producing custom UI that immediately goes off-brand.
             </p>
             <p className="text-sm leading-relaxed font-light" style={{ color: "var(--muted-foreground)" }}>
               The real measure of the system is what it freed up. When UI is handled, teams do UX. That was the point from the beginning.
