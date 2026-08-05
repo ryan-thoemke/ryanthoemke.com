@@ -55,7 +55,8 @@
       "Bash(grep -rn \"{{,\" src --include=\"*.tsx\")",
       "Bash(gh api *)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" --max-time 15 https://ryanthoemke.vercel.app/work/figma)",
-      "Bash(curl -s --max-time 15 https://ryanthoemke.vercel.app/work/figma)"
+      "Bash(curl -s --max-time 15 https://ryanthoemke.vercel.app/work/figma)",
+      "Bash(lsof -i :3000 -sTCP:LISTEN -t)"
     ]
   }
 }

@@ -23,12 +23,18 @@ const gigs = [
 ];
 
 const influences = [
-  { name: "Aerosmith",    note: "The first rock that hit different" },
-  { name: "Bob Seger",    note: "Honest, working-class, real" },
-  { name: "Jackson 5",    note: "Earliest memories, backseat of the car" },
-  { name: "Motown",       note: "Where the feeling comes from" },
-  { name: "John Mayer",   note: "Guitar as a second voice" },
-  { name: "Tyler Childers", note: "Storytelling done right" },
+  "Jackson 5",
+  "Motown",
+  "Bob Seger",
+  "Aerosmith",
+  "John Mayer",
+  "Tyler Childers",
+];
+
+const writingSlots = [
+  { tag: "Essay" },
+  { tag: "Song notes" },
+  { tag: "Field notes" },
 ];
 
 export default function MusicPage() {
@@ -177,7 +183,7 @@ export default function MusicPage() {
 
       <div style={{ height: "1px", background: "var(--border)" }} />
 
-      {/* Influences */}
+      {/* Writing */}
       <section
         className="px-8 py-20 md:px-16 md:py-24"
         style={{ background: "var(--muted)" }}
@@ -188,38 +194,49 @@ export default function MusicPage() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-xs uppercase tracking-[0.22em] font-medium mb-14"
+            className="text-xs uppercase tracking-[0.22em] font-medium mb-6"
             style={{ color: "var(--tan)" }}
           >
-            Influences
+            Writing
           </motion.p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-            {influences.map((inf, i) => (
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
+            className="font-display text-2xl md:text-3xl leading-snug max-w-2xl mb-14"
+            style={{ color: "var(--green-deep)" }}
+          >
+            Notes on songwriting, gear, and the craft. First one&apos;s on the way.
+          </motion.p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {writingSlots.map((slot, i) => (
               <motion.div
-                key={inf.name}
+                key={slot.tag}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                  delay: i * 0.06,
+                  delay: 0.15 + i * 0.08,
                   duration: 0.5,
                   ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
                 }}
-                className="flex items-baseline justify-between py-5 group"
-                style={{ borderBottom: "1px solid var(--border)" }}
+                className="flex flex-col justify-between gap-16 p-7 rounded-sm"
+                style={{ border: "1px dashed var(--border)" }}
               >
                 <span
-                  className="font-display text-xl group-hover:translate-x-1 transition-transform duration-300"
-                  style={{ color: "var(--green-deep)" }}
+                  className="text-xs uppercase tracking-[0.18em] font-medium"
+                  style={{ color: "var(--tan)" }}
                 >
-                  {inf.name}
+                  {slot.tag}
                 </span>
                 <span
-                  className="text-xs font-light ml-4 text-right"
-                  style={{ color: "var(--muted-foreground)" }}
+                  className="text-xs uppercase tracking-[0.18em] font-medium"
+                  style={{ color: "var(--muted-foreground)", opacity: 0.55 }}
                 >
-                  {inf.note}
+                  Coming soon
                 </span>
               </motion.div>
             ))}
@@ -227,7 +244,27 @@ export default function MusicPage() {
         </div>
       </section>
 
-      <div style={{ height: "1px", background: "var(--border)" }} />
+      {/* Influences tag */}
+      <div
+        className="px-8 md:px-16 py-8 flex flex-wrap items-center gap-2"
+        style={{ borderBottom: "1px solid var(--border)" }}
+      >
+        <span
+          className="text-xs uppercase tracking-[0.18em] font-medium mr-2"
+          style={{ color: "var(--tan)" }}
+        >
+          Influences
+        </span>
+        {influences.map((name) => (
+          <span
+            key={name}
+            className="text-xs font-light px-3 py-1 rounded-full"
+            style={{ border: "1px solid var(--border)", color: "var(--muted-foreground)" }}
+          >
+            {name}
+          </span>
+        ))}
+      </div>
 
       {/* Upcoming shows */}
       <section className="px-8 py-20 md:px-16 md:py-24">
@@ -296,41 +333,6 @@ export default function MusicPage() {
           >
             Performing solo acoustic: guitar, mic, PA. About once or twice a month.
           </motion.p>
-        </div>
-      </section>
-
-      <div style={{ height: "1px", background: "var(--border)" }} />
-
-      {/* Closing quote */}
-      <section
-        className="px-8 py-20 md:px-16 md:py-28 relative overflow-hidden"
-        style={{ background: "var(--green-deep)" }}
-      >
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background: "radial-gradient(ellipse at 30% 60%, oklch(0.38 0.11 155 / 0.4), transparent 65%)",
-          }}
-        />
-        <div className="max-w-6xl mx-auto relative z-10 flex gap-8">
-          <div
-            className="w-px flex-shrink-0 mt-1 hidden md:block"
-            style={{ background: "var(--tan-light)", opacity: 0.3 }}
-          />
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-          >
-            <blockquote
-              className="font-display text-2xl md:text-4xl leading-snug max-w-3xl"
-              style={{ color: "var(--background)" }}
-            >
-              &ldquo;I&apos;ve always believed the song is enough if the song is good.
-              I&apos;m still working on making better songs.&rdquo;
-            </blockquote>
-          </motion.div>
         </div>
       </section>
 
