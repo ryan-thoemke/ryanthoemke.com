@@ -20,8 +20,22 @@ const projects = [
     tag: "Design Systems",
   },
   {
-    slug: "restaurant",
+    slug: "figma",
     index: "02",
+    title: "Figma at Scale",
+    category: "Design Infrastructure · Governance · Systems",
+    summary:
+      "Running Figma as organizational infrastructure for 50 designers, 1,000+ engineers, and 50+ product managers. Two library generations, a full token pipeline, and components built to work in code.",
+    stats: [
+      { value: "50",    label: "Designers" },
+      { value: "1,000+", label: "Engineers" },
+      { value: "50+",   label: "PMs" },
+    ],
+    tag: "Design Ops",
+  },
+  {
+    slug: "restaurant",
+    index: "03",
     title: "A Decade Behind the Bar",
     category: "Operations · Leadership · Brand · Hospitality",
     summary:

@@ -147,9 +147,9 @@ export default function DesignSystemPage() {
             style={{ color: "var(--green-deep)" }}
           >
             An Enterprise<br />
-            <em className="font-display" style={{ fontStyle: "italic", color: "var(--tan-deep)" }}>
+            <span className="font-display" style={{ color: "var(--tan-deep)" }}>
               Design System
-            </em>
+            </span>
           </motion.h1>
 
           <motion.p custom={3} variants={fadeUp} initial="hidden" animate="show"

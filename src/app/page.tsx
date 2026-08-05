@@ -93,12 +93,12 @@ export default function Home() {
           >
             Designer.
             <br />
-            <em
+            <span
               className="font-display"
-              style={{ color: "var(--tan-deep)", fontStyle: "italic" }}
+              style={{ color: "var(--tan-deep)" }}
             >
               Songwriter.
-            </em>
+            </span>
             <br />
             Maker of things.
           </motion.h1>
@@ -355,7 +355,7 @@ export default function Home() {
               transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
             >
               <blockquote
-                className="font-display text-xl md:text-2xl leading-relaxed italic max-w-2xl"
+                className="font-display text-xl md:text-2xl leading-relaxed max-w-2xl"
                 style={{ color: "var(--green-deep)" }}
               >
                 &ldquo;It&apos;s 3 am in Franklin, as the lights buzz overhead,

@@ -124,9 +124,9 @@ export default function OutdoorsPage() {
           >
             Outside.
             <br />
-            <em className="font-display" style={{ color: "var(--tan-deep)", fontStyle: "italic" }}>
+            <span className="font-display" style={{ color: "var(--tan-deep)" }}>
               On the water.
-            </em>
+            </span>
           </motion.h1>
 
           <motion.p

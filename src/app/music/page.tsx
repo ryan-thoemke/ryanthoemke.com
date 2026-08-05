@@ -91,9 +91,9 @@ export default function MusicPage() {
           >
             Always knew.
             <br />
-            <em className="font-display" style={{ color: "var(--tan-light)", fontStyle: "italic" }}>
+            <span className="font-display" style={{ color: "var(--tan-light)" }}>
               Took a while.
-            </em>
+            </span>
           </motion.h1>
 
           <motion.p
@@ -324,7 +324,7 @@ export default function MusicPage() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
             <blockquote
-              className="font-display text-2xl md:text-4xl leading-snug italic max-w-3xl"
+              className="font-display text-2xl md:text-4xl leading-snug max-w-3xl"
               style={{ color: "var(--background)" }}
             >
               &ldquo;I&apos;ve always believed the song is enough if the song is good.

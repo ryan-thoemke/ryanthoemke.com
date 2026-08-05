@@ -75,9 +75,9 @@ export default function AboutPage() {
             style={{ color: "var(--green-deep)" }}
           >
             Not easily<br />
-            <em className="font-display" style={{ color: "var(--tan-deep)", fontStyle: "italic" }}>
+            <span className="font-display" style={{ color: "var(--tan-deep)" }}>
               reduced.
-            </em>
+            </span>
           </motion.h1>
 
           <motion.p
@@ -255,7 +255,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
           >
             <blockquote
-              className="font-display text-2xl md:text-4xl leading-snug italic max-w-3xl"
+              className="font-display text-2xl md:text-4xl leading-snug max-w-3xl"
               style={{ color: "var(--green-deep)" }}
             >
               &ldquo;Beautiful but usable over perfect but lifeless.&rdquo;

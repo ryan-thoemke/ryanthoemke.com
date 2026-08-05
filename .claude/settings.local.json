@@ -45,7 +45,14 @@
       "Bash(unzip -o cover.zip word/document.xml -d cover_extracted)",
       "Bash(cp \"/Users/ryanthoemke/Desktop/Job Stuff/Ryan_Thoemke_Resume.pdf\" /Users/ryanthoemke/ryanthoemke.com/public/Ryan_Thoemke_Resume.pdf && mkdir -p /Users/ryanthoemke/ryanthoemke.com/src/app/resume)",
       "Bash(kill 42195)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(sed -i '' 's/years: \"2021 - Present\"/years: \"2021 to Present\"/' /Users/ryanthoemke/ryanthoemke.com/src/app/resume/page.tsx)",
+      "Bash(sed -i '' 's/years: \"2018 - 2020\"/years: \"2018 to 2020\"/' /Users/ryanthoemke/ryanthoemke.com/src/app/resume/page.tsx)",
+      "Bash(sed -i '' 's/years: \"2016 - 2018\"/years: \"2016 to 2018\"/' /Users/ryanthoemke/ryanthoemke.com/src/app/resume/page.tsx)",
+      "Bash(sed -i '' 's/years: \"2010 - 2014\"/years: \"2010 to 2014\"/' /Users/ryanthoemke/ryanthoemke.com/src/app/resume/page.tsx)",
+      "Bash(sed -i '' 's/years: \"2020 - 2021\"/years: \"2020 to 2021\"/' /Users/ryanthoemke/ryanthoemke.com/src/app/resume/page.tsx)",
+      "Bash(perl -0pi -e 's/style=\\\\{\\\\{,\\\\s*/style={{ /g' src/app/*.tsx src/app/**/*.tsx src/app/**/**/*.tsx)",
+      "Bash(grep -rn \"{{,\" src --include=\"*.tsx\")"
     ]
   }
 }
