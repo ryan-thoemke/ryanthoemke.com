@@ -52,7 +52,10 @@
       "Bash(sed -i '' 's/years: \"2010 - 2014\"/years: \"2010 to 2014\"/' /Users/ryanthoemke/ryanthoemke.com/src/app/resume/page.tsx)",
       "Bash(sed -i '' 's/years: \"2020 - 2021\"/years: \"2020 to 2021\"/' /Users/ryanthoemke/ryanthoemke.com/src/app/resume/page.tsx)",
       "Bash(perl -0pi -e 's/style=\\\\{\\\\{,\\\\s*/style={{ /g' src/app/*.tsx src/app/**/*.tsx src/app/**/**/*.tsx)",
-      "Bash(grep -rn \"{{,\" src --include=\"*.tsx\")"
+      "Bash(grep -rn \"{{,\" src --include=\"*.tsx\")",
+      "Bash(gh api *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" --max-time 15 https://ryanthoemke.vercel.app/work/figma)",
+      "Bash(curl -s --max-time 15 https://ryanthoemke.vercel.app/work/figma)"
     ]
   }
 }
